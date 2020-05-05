@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <ul>
+        <li><a>@Html.ActionLink("Trang chủ", "Index", "Home")</a></li>
+        <li><a>@Html.ActionLink("Giới thiệu", "About", "Home")</a></li>
+        <li><a>@Html.ActionLink("Dịch vụ", "Service", "Home")</a></li>
+        <li><a>@Html.ActionLink("Liên hệ", "Contact", "Home")</a></li>
+
+        @if (Context.User.Identity.IsAuthenticated)
+        {
+            <li class="dropdown" style="float:right;">
+                <a href="javascript:void(0)" class="dropbtn">@Context.User.Identity.Name</a>
+                <div class="dropdown-content">
+                    @Html.ActionLink("Hồ sơ", "Profile", "UserPro")
+                    @Html.ActionLink("Đổi mật khẩu", "ChangePass", "UserPro")
+                    @*<a href="#">Đổi mật khẩu</a>*@
+                    @Html.ActionLink("Đăng xuất", "Logout", "Home")
+                </div>
+            </li>
+        }
+        else
+        {
+            <li><a>@Html.ActionLink("Đăng ký", "SignUp", "Home")</a></li>
+            <li>@Html.ActionLink("Đăng nhập", "Login", "Home")</li>
+        }
+ 
+    </ul>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        console.log("Test: " + "@TempData["IsCreate"]");
+        if('@TempData["IsCreate"]' == 'True'){
+            alert("Đăng ký thành công!");
+        }
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<style>
+    .field-validation-error {
+        color: red;
+    }
+</style>

@@ -1,0 +1,70 @@
+﻿@model PetPamper.Models.UserModel
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" action="/Home/SignUp">
+        <div class="signup-content">
+            <div class="signup-body">
+                <h1>Đăng ký</h1>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Họ và tên</label>
+                            <input type="text" name="TenKH" class="form-control" placeholder="Họ và tên" value="@Model.TenKH" id="txtTenKH" />
+                            @Html.ValidationMessageFor(model => model.TenKH)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Tên đăng nhập</label>
+                            <input type="text" name="Tendangnhap" class="form-control" placeholder="Tên đăng nhập" value="@Model.Tendangnhap" id="txtTendangnhap" />
+                            @Html.ValidationMessageFor(model => model.Tendangnhap)
+                        </div>
+                        <div class="form-group">
+                            <label>Mật khẩu</label>
+                            <input type="password" name="Matkhau" class="form-control" placeholder="Mật khẩu" value="@Model.Matkhau" id="txtMatkhau" />
+                            @Html.ValidationMessageFor(model => model.Matkhau)
+                        </div>
+                        <div class="form-group">
+                            <label>Số chứng minh nhân dân</label>
+                            <input type="text" name="SoCMND" class="form-control" placeholder="Số CMND" value="@Model.SoCMND" id="txtSoCMND" />
+                            @Html.ValidationMessageFor(model => model.SoCMND)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Số Điện thoại</label>
+                            <input type="text" name="SDT" class="form-control" placeholder="Số điện thoại" value="@Model.SDT" id="txtSDT" />
+                            @Html.ValidationMessageFor(model => model.SDT)
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="Email" class="form-control" placeholder="Email" value="@Model.Email" id="txtEmail" />
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <textarea class="form-control" name="Diachi" rows="3" placeholder="Địa chỉ" id="txtAddress">@Model.Diachi</textarea>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btnSaveProfile">Đăng ký</button>
+            </div>
+        </div>
+    </form>
+</body>
+

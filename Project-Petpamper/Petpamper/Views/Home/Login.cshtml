@@ -1,0 +1,56 @@
+﻿@model PetPamper.Models.LoginModel
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- BEGIN LOGIN FORM -->
+<html>
+<head>
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" action="/Home/Login">
+        <div>
+            <div class="sign-in-body">
+                <h1>Sign in</h1>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                           
+                            @Html.LabelFor(model => model.Tendangnhap)
+                            @Html.EditorFor(model => model.Tendangnhap, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Tendangnhap)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Matkhau)
+                            @Html.EditorFor(model => model.Matkhau, new { @class = "form-control", type = "password" })
+                            @Html.ValidationMessageFor(model => model.Matkhau)
+                            
+                        </div>
+                        <div class="row">
+                            @Html.ValidationMessage("abcdef", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions clearfix text-center">
+                    <input style="width:initial;" type="checkbox" id="chkRememberMe" value="1" />
+                    Ghi nhớ?
+                </div>
+                    <button class="btn btn-primary" id="btnSaveProfile">Đăng nhập</button>
+                <div class="forget-password">
+                    <h4>Bạn quên mật khẩu ?</h4>
+                    <p>
+                        đừng lo lắng, nhấn <a href="/home/forgot" id="forget-password">
+                            vào đây
+                        </a>
+                        để đặt lại mật khẩu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<!-- END LOGIN FORM -->

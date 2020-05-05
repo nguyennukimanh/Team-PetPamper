@@ -1,0 +1,40 @@
+﻿@model PetPamper.Models.ForgotModel
+@{
+    ViewBag.Title = "Forgot";
+}
+
+<!-- BEGIN FORGOT PASSWORD FORM -->
+
+<head>
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form class="forget-form" action="/home/forgot" method="post">
+        <div class="forgot-form-body">
+            <h3>Quên mật khẩu ?</h3>
+            <p>
+                Nhập email của bạn để đặt lại mật khẩu.
+            </p>
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.Tendangnhap)
+                @Html.EditorFor(model => model.Tendangnhap, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Tendangnhap)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email)
+                @Html.EditorFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn green-haze pull-right" id="send-forgot-request">
+                    Gửi <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+                <button type="button" id="back-btn" class="btn">
+                    <i class="m-icon-swapleft"></i> Trở về
+                </button>
+            </div>
+        </div>
+    </form>
+</body>
+<!-- END FORGOT PASSWORD FORM -->
