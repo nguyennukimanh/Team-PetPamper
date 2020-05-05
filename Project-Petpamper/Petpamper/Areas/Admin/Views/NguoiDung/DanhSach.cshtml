@@ -1,0 +1,43 @@
+﻿@model List<PetPamper.Areas.Admin.Models.NguoiDungModel>
+@{
+    ViewBag.Title = "Danh Sách Người Dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead class="text-center bg-info text-white text-uppercase">
+        <tr>
+            <td>Mã ND</td>
+            <td>Tên đăng nhập</td>
+            <td>Xem chi tiết</td>
+            <td>Sửa</td>
+            <td>Xóa</td>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaND</td>
+            <td>@item.Tendangnhap</td>
+            <td>
+                <a href="/admin/nguoidung/chitiet/@item.MaND">
+                    Chi tiết
+                </a>
+            </td>
+            <td>
+                <a href="/admin/nguoidung/sua/@item.MaND">
+                    Sửa
+                </a>
+            </td>
+            <td>
+                <a href="/admin/nguoidung/xoa/@item.MaND">
+                    Xóa
+                </a>
+            </td>
+        </tr>
+            
+    }
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+﻿@model PetPamper.Areas.Admin.Models.NguoiDungModel
+@{
+    ViewBag.Title = "Tình Trạng Người Dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        if('@ViewBag.IsUpdate' == 'True'){
+            alert("Cập nhật thành công!");
+        }
+       
+    </script>
+
+}
+
+<form method="post" action="/Admin/NguoiDung/Sua">
+    @Html.Hidden("MaND", Model.MaND)
+    @Html.Hidden("MaKH", Model.MaKH)
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" name="Tendangnhap" class="form-control" placeholder="Tên đăng nhập" value="@Model.Tendangnhap" id="txtTendangnhap" />
+                @Html.ValidationMessageFor(model => model.Tendangnhap)
+            </div>
+            <div class="form-group">
+                <label>Trạng thái</label>
+                <input type="text" name="Trangthai" class="form-control" placeholder="True(1)/False(0)" value="@Model.Trangthai" id="txtTrangthai" />
+                @Html.ValidationMessageFor(model => model.Trangthai)
+            </div>
+            <div class="form-group">
+                <label>Quản lý</label>
+                <input type="text" name="Quanly" class="form-control" placeholder="True(1)/False(0)" value="@Model.Quanly" id="txtQuanly" />
+                @Html.ValidationMessageFor(model => model.Quanly)
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" id="btnSaveProfile">Lưu</button>
+</form>
+
+

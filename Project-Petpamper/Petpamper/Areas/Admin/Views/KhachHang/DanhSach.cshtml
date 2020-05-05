@@ -1,0 +1,44 @@
+﻿@model List<PetPamper.Areas.Admin.Models.KhachHangModel>
+@{
+    ViewBag.Title = "Danh Sách Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead class="text-center bg-info text-white text-uppercase">
+        <tr>
+            <td>Mã KH</td>
+            <td>Họ và tên</td>
+            <td>Số CMND</td>
+            <td>Số ĐT</td>
+            <td>Email</td>
+            <td>Địa chỉ</td>
+            <td>Sửa</td>
+            <td>Xóa</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaKH</td>
+                <td>@item.Name</td>
+                <td>@item.IdentifyNumber</td>
+                <td>@item.Phone</td>
+                <td>@item.Email</td>
+                <td>@item.Address</td>
+                <td>
+                    <a  href="/admin/khachhang/sua/@item.MaKH">
+                        Sửa
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/khachhang/xoa/@item.MaKH">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

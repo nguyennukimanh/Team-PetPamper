@@ -1,0 +1,65 @@
+﻿@model PetPamper.Areas.Admin.Models.NguoiDungModel
+@{
+    ViewBag.Title = "Chi Tiết Người Dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="/Admin/NguoiDung/Chitiet">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Mã ND</label>
+                <input type="text" name="MaND" class="form-control" value="@Model.MaND"/>
+
+            </div>
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" name="Tendangnhap" class="form-control" value="@Model.Tendangnhap" />
+            </div>
+        </div>
+            <div class="col-md-6">
+            <div class="form-group">
+                <label>Mã KH</label>
+                <input type="text" name="MaKH" class="form-control" value="@Model.MaKH" />
+            </div>
+            <div class="form-group">
+                <label>Trạng thái</label>
+                <input type="text" name="Trangthai" class="form-control" value="@Model.Trangthai"/>
+            </div>
+            <div class="form-group">
+                <label>Quản lý</label>
+                <input type="text" name="Quanly" class="form-control" value="@Model.Quanly"/>
+            </div>
+        </div>
+    </div>
+    
+</form>
+
+
+@*<table class="table table-bordered table-hover">
+    <thead class="text-center bg-info text-white text-uppercase">
+        <tr>
+            <td>Mã KH</td>
+            <td>Họ và tên</td>
+            <td>Số điện thoại</td>
+            <td>Số CMND</td>
+            <td>Email</td>
+            <td>Địa chỉ</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaKH</td>
+                <td>@item.TenKH</td>
+                <td>@item.SDT</td>
+                <td>@item.SoCMND</td>
+                <td>@item.Email</td>
+                <td>@item.Diachi</td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+

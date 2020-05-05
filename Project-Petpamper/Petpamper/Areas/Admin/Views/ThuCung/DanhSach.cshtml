@@ -1,0 +1,46 @@
+﻿@model List<PetPamper.Areas.Admin.Models.ThuCungModel>
+@{
+    ViewBag.Title = "Danh Sách Thú Cưng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+    <table class="table table-bordered table-hover">
+        <thead class="text-center bg-info text-white text-uppercase">
+            <tr>
+                <td>Mã TC</td>
+                <td>Mã KH</td>
+                <td>Tên TC</td>
+                <td>Loài</td>
+                <td>Giới tính</td>
+                <td>Cân nặng</td>
+                <td>Tuổi</td>
+                <td>Sửa</td>
+                <td>Xóa</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaTC</td>
+                    <td>@item.MaKH</td>
+                    <td>@item.TenTC</td>
+                    <td>@item.Loai</td>
+                    <td>@item.Gioitinh</td>
+                    <td>@item.Cannang</td>
+                    <td>@item.Tuoi</td>
+                <td>
+                    <a href="/admin/thucung/sua/@item.MaTC">
+                        Sửa
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/thucung/xoa/@item.MaTC">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
