@@ -193,6 +193,7 @@
     <Content Include="assets\admin\admin\layout\img\logo-big.png" />
     <Content Include="assets\admin\admin\layout\img\logo-invert.png" />
     <Content Include="assets\admin\admin\layout\img\logo.png" />
+    <Content Include="assets\admin\admin\layout\img\logopetpamper.png" />
     <Content Include="assets\admin\admin\layout\img\menu-toggler.png" />
     <Content Include="assets\admin\admin\layout\img\photo1.jpg" />
     <Content Include="assets\admin\admin\layout\img\photo2.jpg" />
@@ -1416,6 +1417,9 @@
     <Content Include="Areas\Admin\Views\User\ChangePass.cshtml" />
     <Content Include="Areas\Admin\Views\User\ChangePassSuccess.cshtml" />
     <Content Include="Areas\Admin\Views\User\ResetPassword.cshtml" />
+    <Content Include="Areas\Admin\Views\DichVu\DanhSach.cshtml" />
+    <Content Include="Areas\Admin\Views\DichVu\Sua.cshtml" />
+    <Content Include="Areas\Admin\Views\DichVu\Them.cshtml" />
     <None Include="Scripts\jquery-3.4.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.0.js" />
     <Content Include="Scripts\jquery-3.4.0.min.js" />
@@ -1445,12 +1449,12 @@
     <Content Include="Views\UserPro\ChangePass.cshtml" />
     <Content Include="Views\UserPro\ChangePassSuccess.cshtml" />
     <Content Include="Views\Home\Forgot.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Admin\Views\DatLich\" />
-    <Folder Include="Areas\Admin\Views\DichVu\" />
     <Folder Include="Areas\Admin\Views\HoaDon\" />
     <Folder Include="Content\" />
     <Folder Include="Views\User\" />

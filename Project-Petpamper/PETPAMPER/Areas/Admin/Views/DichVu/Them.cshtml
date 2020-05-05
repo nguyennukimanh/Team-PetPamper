@@ -1,0 +1,45 @@
+﻿@model PetPamper.Areas.Admin.Models.DichVuModel
+@{
+    ViewBag.Title = "Thêm Dịch Vụ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+
+
+}
+
+<form method="post" action="/Admin/DichVu/Them">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Mã DV</label>
+                <input type="text" name="MaDV" class="form-control" placeholder="Mã dịch vụ" value="@Model.MaDV" id="txtMaDV" />
+                @Html.ValidationMessageFor(model => model.MaDV)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Tên DV</label>
+                <input type="text" name="TenDV" class="form-control" placeholder="Tên dịch vụ" value="@Model.TenDV" id="txtTenDV" />
+                @Html.ValidationMessageFor(model => model.TenDV)
+            </div>
+            <div class="form-group">
+                <label>Thời Gian</label>
+                <input type="text" name="Thoigian" class="form-control" placeholder="Thời gian" value="@Model.Thoigian" id="txtThoigian" />
+                @Html.ValidationMessageFor(model => model.Thoigian)
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Chi Phí</label>
+                <input type="text" name="Chiphi" class="form-control" placeholder="Chi phí" value="@Model.Chiphi" id="txtChiphi" />
+                @Html.ValidationMessageFor(model => model.Chiphi)
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" id="btnSaveProfile">Lưu</button>
+</form>

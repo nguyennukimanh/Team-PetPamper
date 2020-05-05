@@ -1,0 +1,42 @@
+﻿@model List<PetPamper.Areas.Admin.Models.DichVuModel>
+@{
+    ViewBag.Title = "Danh Sách Dịch Vụ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead class="text-center bg-info text-white text-uppercase">
+        <tr>
+            <td>Mã DV</td>
+            <td>Tên DV</td>
+            <td>Thời Gian</td>
+            <td>Chi Phí</td>
+            <td>Sửa</td>
+            <td>Xóa</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaDV</td>
+                <td>@item.TenDV</td>
+                <td>@item.Thoigian</td>
+                <td>@item.Chiphi</td>
+                <td>
+                    <a href="/admin/dichvu/sua/@item.MaDV">
+                        Sửa
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/dichvu/xoa/@item.MaDV">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
