@@ -1420,6 +1420,8 @@
     <Content Include="Areas\Admin\Views\DichVu\DanhSach.cshtml" />
     <Content Include="Areas\Admin\Views\DichVu\Sua.cshtml" />
     <Content Include="Areas\Admin\Views\DichVu\Them.cshtml" />
+    <Content Include="Areas\Admin\Views\HoaDon\DanhSach.cshtml" />
+    <Content Include="Areas\Admin\Views\HoaDon\Them.cshtml" />
     <None Include="Scripts\jquery-3.4.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.0.js" />
     <Content Include="Scripts\jquery-3.4.0.min.js" />
@@ -1455,7 +1457,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Admin\Views\DatLich\" />
-    <Folder Include="Areas\Admin\Views\HoaDon\" />
     <Folder Include="Content\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
