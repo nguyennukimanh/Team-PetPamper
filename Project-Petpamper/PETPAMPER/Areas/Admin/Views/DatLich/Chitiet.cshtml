@@ -1,0 +1,83 @@
+﻿@model PetPamper.Areas.Admin.Models.DatLichModel
+
+@{
+    ViewBag.Title = "Chitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chitiet</h2>
+
+<div>
+    <h4>DatLichModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLich)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLich)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigiandat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigiandat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigianden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigianden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigiantra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigiantra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinhthuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinhthuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

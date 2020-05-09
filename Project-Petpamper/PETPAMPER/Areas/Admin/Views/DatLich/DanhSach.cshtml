@@ -1,0 +1,56 @@
+﻿@model List<PetPamper.Areas.Admin.Models.DatLichModel>
+
+@{
+    ViewBag.Title = "Danh Sách Đặt Lịch";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead class="text-center bg-info text-white text-uppercase">
+        <tr>
+            <td>Mã lịch</td>
+            <td>Mã Khách Hàng</td>
+            <td>Mã Thú Cưng</td>
+            <td>Thời gian đặt</td>
+            <td>Thời gian đến</td>
+            <td>Thời gian trả</td>
+            <td>Hình thức</td>
+            <td>Trạng thái</td>
+            <td>Xem chi tiết</td>
+            <td>Sửa</td>
+            <td>Xóa</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaLich</td>
+                <td>@item.MaKH</td>
+                <td>@item.MaTC</td>
+                <td>@item.Thoigiandat</td>
+                <td>@item.Thoigianden</td>
+                <td>@item.Thoigiantra</td>
+                <td>@item.Hinhthuc</td>
+                <td>@item.Trangthai</td>
+                <td>
+                    <a href="/admin/datlich/chitiet/@item.MaLich">
+                        Chi tiết
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/datlich/sua/@item.MaLich">
+                        Sửa
+                    </a>
+                </td>
+                <td>
+                    <a href="/admin/datlich/xoa/@item.MaLich">
+                        Xóa
+                    </a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

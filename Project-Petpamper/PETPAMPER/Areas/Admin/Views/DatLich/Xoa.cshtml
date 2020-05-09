@@ -1,0 +1,90 @@
+﻿@model PetPamper.Areas.Admin.Models.DatLichModel
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xoa</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DatLichModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLich)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLich)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigiandat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigiandat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigianden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigianden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigiantra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigiantra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hinhthuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hinhthuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoá" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

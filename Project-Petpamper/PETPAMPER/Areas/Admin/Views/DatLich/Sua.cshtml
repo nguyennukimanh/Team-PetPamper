@@ -1,0 +1,59 @@
+﻿@model PetPamper.Areas.Admin.Models.DatLichModel
+
+@{
+    ViewBag.Title = "Tình Trạng Đặt Lịch";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        if('@ViewBag.IsUpdate' == 'True'){
+            alert("Cập nhật thành công!");
+        }
+
+    </script>
+
+}
+
+<form method="post" action="/Admin/NguoiDung/Sua">
+    @*@Html.Hidden("MaLich", Model.MaLich)*@
+    @Html.Hidden("MaKH", Model.MaKH)
+    @Html.Hidden("MaTC", Model.MaTC)
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Mã Lịch</label>
+                <input type="text" name="MaLich" class="form-control" placeholder="Mã Lịch" value="@Model.MaLich" id="txtMalich" />
+                @Html.ValidationMessageFor(model => model.MaLich)
+            </div>
+            <div class="form-group">
+                <label>Thời gian đặt</label>
+                <input type="text" name="Thoigiandat" class="form-control" placeholder="Thời gian đặt" value="@Model.Thoigiandat" id="txtThoigiandat" />
+                @Html.ValidationMessageFor(model => model.Thoigiandat)
+            </div>
+            <div class="form-group">
+                <label>Thời gian đến</label>
+                <input type="text" name="Thoigianden" class="form-control" placeholder="Thời gian đến" value="@Model.Thoigianden" id="txtThoigianden" />
+                @Html.ValidationMessageFor(model => model.Thoigianden)
+            </div>
+            <div class="form-group">
+                <label>Thời gian trả</label>
+                <input type="text" name="Thoigiantra" class="form-control" placeholder="Thời gian trả" value="@Model.Thoigiantra" id="txtThoigiantra" />
+                @Html.ValidationMessageFor(model => model.Thoigiantra)
+            </div>
+            <div class="form-group">
+                <label>Hình thức</label>
+                <input type="text" name="Hinhthuc" class="form-control" placeholder="Nhanvientoilay(0)/Khachhangmangtoi(1)" value="@Model.Hinhthuc" id="txtHinhthuc" />
+                @Html.ValidationMessageFor(model => model.Hinhthuc)
+            </div>
+            <div class="form-group">
+                <label>Trạng thái</label>
+                <input type="text" name="Trangthai" class="form-control" placeholder="Pending(0)/Completed(1)/Cancelled(2)" value="@Model.Trangthai" id="txtTrangthai" />
+                @Html.ValidationMessageFor(model => model.Trangthai)
+            </div>
+
+        </div>
+    </div>
+    <button class="btn btn-primary" id="btnSaveProfile">Lưu</button>
+</form>
