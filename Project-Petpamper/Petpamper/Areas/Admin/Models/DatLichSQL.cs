@@ -44,7 +44,7 @@ namespace PetPamper.Areas.Admin.Models
                     MaLich = userRow["MaLich"] + string.Empty,
                     MaKH = userRow["MaKH"] + string.Empty,
                     MaTC = userRow["MaTC"] + string.Empty,
-                    Thoigiandat = convert.toDatetime(userRow["thoigiandat"] + string.Empty),
+                    Thoigiandat = userRow["thoigiandat"] + string.Empty,
                     Thoigianden = userRow["Thoigianden"] + string.Empty,
                     Thoigiantra = userRow["Thoigiantra"] + string.Empty,
                     Hinhthuc = int.Parse(userRow["Hinhthuc"] + string.Empty),

@@ -791,3 +791,6 @@ D:\Team-PetPamper\Project-Petpamper\PETPAMPER\bin\Microsoft.CodeDom.Providers.Do
 D:\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.csprojResolveAssemblyReference.cache
 D:\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.dll
 D:\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.pdb
+D:\coppy e\QTDACNTT\Git\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.csprojResolveAssemblyReference.cache
+D:\coppy e\QTDACNTT\Git\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.dll
+D:\coppy e\QTDACNTT\Git\Team-PetPamper\Project-Petpamper\PETPAMPER\obj\Debug\PetPamper.pdb
